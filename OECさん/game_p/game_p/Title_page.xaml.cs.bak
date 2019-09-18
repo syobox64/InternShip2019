@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+using static game_p.SocketClient;
+
+
+namespace game_p
+{
+    /// <summary>
+    /// Title_page.xaml の相互作用ロジック
+    /// </summary>
+    /// 
+    
+
+    public partial class Title_page : Page
+    {
+        private static Play_page play_page = null;
+        private static Taiki_page taiki_page = null;
+        public AsynchronousClient clients;
+        private object e;
+
+        public Title_page()
+        {
+            InitializeComponent();
+            clients = new AsynchronousClient();
+        }
+
+        private void Non(String data)
+        {
+            Dispatcher.Invoke((Action)(() =>
+            {
+            }));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (play_page == null)
+            {
+                clients.DataReceiveCallback = Non;
+                //clients.Connect("DESKTOP-1QM7B6T", 11000);
+                clients.Connect("OEC-KDC-457", 11000);
+                // 次に表示するページ（プレイ画面)を生成、以後使いまわし
+                play_page = new Play_page();
+                play_page.clients = clients;
+            }
+
+            // プレイページへ移動
+            this.NavigationService.Navigate(play_page);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (play_page == null)
+            {
+                clients.DataReceiveCallback = Non;
+                //clients.Connect("DESKTOP-1QM7B6T", 11000);
+                clients.Connect("OEC-KDC-457", 11000);
+
+
+
+                // 次に表示するページ（待機画面）を生成、以後使いまわし
+                taiki_page = new Taiki_page();
+                taiki_page.clients = clients;
+            }
+
+            // 待機ページへ移動
+            this.NavigationService.Navigate(taiki_page);
+        }
+
+        
+        
+    }
+
+    
+}

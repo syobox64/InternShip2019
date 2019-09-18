@@ -1,0 +1,93 @@
+﻿<Page x:Class="game_p.Play_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:game_p"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="Play_page" Loaded="Page_Loaded">
+
+    <Viewbox>
+    <StackPanel>
+
+        <StackPanel>
+
+            <TextBlock   Height="200" Width="1920" FontSize="72" HorizontalAlignment="Left" VerticalAlignment="Center"  >
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="Resources/sougen.png"/>
+                </TextBlock.Background>
+            <LineBreak />
+            <Run Text="  あなた　"  FontSize="72"  Foreground="#FFFF6432" />
+            <Run  Text="{Binding Name1,Mode=OneWay}" FontSize="40" Foreground="#FFFF6432" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}" />
+            <Run Text="　"  FontSize="72"  Foreground="#FF3264FF" />
+            <Run Text="スコア　"  FontSize="72"  Foreground="#FFFF6432" />
+            <Run Text="{Binding Score1,Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"   FontSize="50" Foreground="#FFFF6432" FontWeight="Bold"/>
+            <Run Text="　 "  FontSize="72"  Foreground="#FF3264FF" />
+            <Run Text="あいて　"  FontSize="72"  Foreground="#FF3264FF" />
+            <Run Text="{Binding Name2,Mode=OneWay}"  FontSize="40" Foreground="#FF3264FF" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}"/>
+            <Run Text="　"  FontSize="72"  Foreground="#FF3264FF" />
+            <Run Text="スコア　"  FontSize="72"  Foreground="#FF3264FF" />
+            <Run Text="{Binding Score2,Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"   FontSize="50" Foreground="#FF3264FF" FontWeight="Bold"/>
+            </TextBlock>
+
+
+            
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+
+
+            <local:mogurahole x:Name="Mogura1_1" />
+            <local:mogurahole x:Name="Mogura1_2" />
+            <local:mogurahole x:Name="Mogura1_3" />
+            <local:mogurahole x:Name="Mogura1_4" />
+            <local:mogurahole x:Name="Mogura1_5" />
+            <local:mogurahole x:Name="Mogura1_6" />
+
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+                <TextBlock Width="120"   FontSize="72"  Foreground="#FF3264FF" />
+                <local:mogurahole x:Name="Mogura2_1" />
+            <local:mogurahole x:Name="Mogura2_2" />
+            <local:mogurahole x:Name="Mogura2_3" />
+            <local:mogurahole x:Name="Mogura2_4" />
+            <local:mogurahole x:Name="Mogura2_5" />
+            <local:mogurahole x:Name="Mogura2_6" />
+        </StackPanel>
+
+        
+        <StackPanel Orientation="Horizontal">
+
+
+            <local:mogurahole x:Name="Mogura3_1" />
+            <local:mogurahole x:Name="Mogura3_2" />
+            <local:mogurahole x:Name="Mogura3_3" />
+            <local:mogurahole x:Name="Mogura3_4" />
+            <local:mogurahole x:Name="Mogura3_5" />
+            <local:mogurahole x:Name="Mogura3_6" />
+
+
+
+        </StackPanel>
+        
+
+        <StackPanel Orientation="Horizontal">
+
+
+            <TextBlock Width="120"   FontSize="72"  Foreground="#FF3264FF" />
+            <local:mogurahole x:Name="Mogura4_1" />
+            <local:mogurahole x:Name="Mogura4_2" />
+            <local:mogurahole x:Name="Mogura4_3" />
+            <local:mogurahole x:Name="Mogura4_4" />
+            <local:mogurahole x:Name="Mogura4_5" />
+            <local:mogurahole x:Name="Mogura4_6" />
+
+
+        </StackPanel>
+    </StackPanel>
+    </Viewbox>
+
+</Page>

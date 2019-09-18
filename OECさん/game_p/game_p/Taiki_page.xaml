@@ -1,0 +1,18 @@
+﻿<Page x:Class="game_p.Taiki_page"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:game_p"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="900"
+      Title="Taiki_page" Loaded="Page_Loaded">
+
+    <Viewbox>
+    <Grid>
+            <TextBox HorizontalAlignment="Center" Height="110" Margin="100,100,100,100" TextWrapping="Wrap" Text="他のプレイヤーの   参加を待っています" VerticalAlignment="Top" Width="200" TextAlignment="Center" FontSize="24" Foreground="#FBF847" Background="#48A682"/>
+
+    </Grid>
+    </Viewbox>
+    
+</Page>
