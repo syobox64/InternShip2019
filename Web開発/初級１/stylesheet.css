@@ -1,0 +1,108 @@
+body {
+  font-family: "Avenir Next";
+}
+
+.header li {
+  list-style: none;
+}
+
+.header {
+  background-color: #26d0c9;
+  color: #fff;
+  height: 90px;
+}
+
+.header-logo {
+  float: left;
+  font-size: 36px;
+  padding: 20px 40px;
+}
+
+.header-list li {
+  float: left;
+  padding: 33px 20px;
+}
+
+.main {
+  padding: 100px 80px;
+}
+
+.copy-container h1 {
+  font-size: 60px;
+  color: #2b2b2b;
+}
+
+.copy-container h2 {
+  font-size: 54px;
+}
+
+.copy-container span {
+  color: #fff;
+  background-color: #2b2b2b;
+}
+
+.contents {
+  height: 700px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.section-title {
+  border-bottom: 2px solid #b0c4de;
+  font-size: 32px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.contents-item li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section2-title {
+  border-bottom: 2px solid #b0c4de;
+  font-size: 26px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h4{
+  font-size: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+/* inputとtextareaのCSSを指定してください */
+input,textarea{
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #dee7ec;
+}
+
+/* contact-submitのCSSを指定してください */
+.contact-submit{
+  background-color: #dee7ec;
+  color: #889eab;
+}
+
+.footer {
+  background-color: #26d0c9;
+  color: #fff;
+  height: 120px;
+  padding: 40px;
+}
+
+.footer-logo {
+  float: left;
+  font-size: 32px;
+}
+
+.footer-list {
+  float: right;
+}
+
+.footer-list li {
+  padding-bottom: 20px;
+}
